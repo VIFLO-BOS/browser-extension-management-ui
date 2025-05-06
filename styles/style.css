@@ -8,6 +8,10 @@
 	display: none;
 }
 
+.active{
+	display: block;
+}
+
 :root {
 	/* NEUTRAL COLOR */
 
@@ -71,12 +75,13 @@ body {
 	justify-content: space-between;
 }
 
-.search-bar img:nth-child(1) {
+.search-bar .logo {
 	margin-right: 8px;
 	width: auto;
 	height: auto;
 	object-fit: cover;
 	object-position: center;
+	cursor: pointer;
 }
 
 .search-bar input {
@@ -95,16 +100,17 @@ body {
 	box-shadow: 0px 0px 8px 0px var(--Red400);
 }
 
-.search-bar img:nth-child(),
-.search-bar img:last-child() {
+.search-bar #searchBarIconSun,
+.search-bar #searchBarIconMoon {
 	padding: 5px 10px;
 	border-radius: 10px;
 	cursor: pointer;
 }
 
-.search-bar img:nth-child(2):hover,
-.search-bar img:last-child:hover {
+.search-bar #searchBarIconSun:hover,
+.search-bar #searchBarIconMoon:hover {
 	outline: 1px solid var(--Red400);
+	transition: all .3s ease-in;
 }
 
 .ext-card-container {
@@ -139,6 +145,7 @@ body {
 	color: var(--Neutral000);
 	border: none;
 	border-radius: 20px;
+	transition: all 0.2s ease-in-out;
 }
 
 .ext-header-buttons .ext-btn-all:hover,
@@ -223,11 +230,14 @@ body {
 }
 
 .ext-footer-left-switch {
-	padding-right: 0px;
-	background: var(--Red500);
+	padding-left: 0px;
+	background: var(--Neutral600);
+
 }
 .ext-footer-right-switch {
-	padding-left: 0px;
+	padding-right: 0px;
+	background: var(--Neutral600);
+
 }
 
 .ext-footer-left-switch .dot-icon-inactive,
@@ -238,8 +248,10 @@ body {
 	border-radius: 50px;
 }
 
-.ext-footer-left-switch{
-	display: none;
+
+
+.dot-icon-active{
+	background: var(--Red500)!important;
 }
 
 @media screen and (max-width: 290px) {
